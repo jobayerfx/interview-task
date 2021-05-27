@@ -1,0 +1,291 @@
+{
+	"info": {
+		"_postman_id": "fc21834a-535b-44f7-ba54-f2a06e564521",
+		"name": "Tikweb-API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Registration",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/register?firstName=Jhon&lastName=Doe&email=jhon.doe@example.com&password=123456",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"register"
+					],
+					"query": [
+						{
+							"key": "firstName",
+							"value": "Jhon"
+						},
+						{
+							"key": "lastName",
+							"value": "Doe"
+						},
+						{
+							"key": "email",
+							"value": "jhon.doe@example.com"
+						},
+						{
+							"key": "password",
+							"value": "123456"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Role List",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYjg5YjY2NWI5ODcyNGVlMWY1ZTk1OTY1NDk4MjM0OTUwY2E3YjNiNzAzYzVlZTdlZjEwMGI5NmNjN2E3OWI2NjY5NTc1Y2I2MTU3NzJhNjgiLCJpYXQiOjE2MjIwMTg3NjIuNzYzNjg5LCJuYmYiOjE2MjIwMTg3NjIuNzYzNjk0LCJleHAiOjE2NTM1NTQ3NjIuNjE2NjQ1LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.F4OvidEUF8qxMxRt0052whNxDxm9XUGRPNRS3YKpu0fYrWZMdHKOyJgmJ9SnjfuoVIzmpwXP-HqqyV4wVdawbeyVoe6YmhQ2_AUdg_87AQUKXXrqIewAftD7Fw50iPXOkPYEKldkbPnuaAdHpLk9xQbCF403jH7-Siew-JKseRnP8jk0Yy6EM13nTNVkIjxR-iTOGozsUHFUWVu6x8x7vX-gbJXVdkRqn5JaDBIrFyOYOu0ha69SL_AENKye-N2a8GCp3I7aW74K3bmmWb_9T-jiDYkKBCnid7W6z85E47F_aGKCubsVEwkE_klOwJECgu3QKpBep14q1YMBWlB3WRUTjRNCLZE70NP02oVqokndF_8L2M1Vudnn-dmoiteEYp_lMWNPjuJzqwIZZNn_ATh0iw9Epp5yIqVB_1Ybe_8sUP0Jkq_rN4xxyYnFhtKkLEy0DIBY81nICQc1DtXmf_5IqDrDYMINICCY4fDlVWFHbrf8UaMEjtWEfrjCc-13TXG19qsAPJWVM8S6O97KTFB8gs0k3oJydPXGRgPT_ZxvycuU1rfQZiqNUqwoOM1vQUKAmKSuOER9ZYX2D_wbjVwCEtKQQU7yKELCXLOBojOBRh5n0HP-BP0gRQUacryEB3X2RBHc7y5h3d9B1Xe9uC0UL01SHGsVe3BlQaqeqIQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/role",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"role"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Role List by Single User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYjg5YjY2NWI5ODcyNGVlMWY1ZTk1OTY1NDk4MjM0OTUwY2E3YjNiNzAzYzVlZTdlZjEwMGI5NmNjN2E3OWI2NjY5NTc1Y2I2MTU3NzJhNjgiLCJpYXQiOjE2MjIwMTg3NjIuNzYzNjg5LCJuYmYiOjE2MjIwMTg3NjIuNzYzNjk0LCJleHAiOjE2NTM1NTQ3NjIuNjE2NjQ1LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.F4OvidEUF8qxMxRt0052whNxDxm9XUGRPNRS3YKpu0fYrWZMdHKOyJgmJ9SnjfuoVIzmpwXP-HqqyV4wVdawbeyVoe6YmhQ2_AUdg_87AQUKXXrqIewAftD7Fw50iPXOkPYEKldkbPnuaAdHpLk9xQbCF403jH7-Siew-JKseRnP8jk0Yy6EM13nTNVkIjxR-iTOGozsUHFUWVu6x8x7vX-gbJXVdkRqn5JaDBIrFyOYOu0ha69SL_AENKye-N2a8GCp3I7aW74K3bmmWb_9T-jiDYkKBCnid7W6z85E47F_aGKCubsVEwkE_klOwJECgu3QKpBep14q1YMBWlB3WRUTjRNCLZE70NP02oVqokndF_8L2M1Vudnn-dmoiteEYp_lMWNPjuJzqwIZZNn_ATh0iw9Epp5yIqVB_1Ybe_8sUP0Jkq_rN4xxyYnFhtKkLEy0DIBY81nICQc1DtXmf_5IqDrDYMINICCY4fDlVWFHbrf8UaMEjtWEfrjCc-13TXG19qsAPJWVM8S6O97KTFB8gs0k3oJydPXGRgPT_ZxvycuU1rfQZiqNUqwoOM1vQUKAmKSuOER9ZYX2D_wbjVwCEtKQQU7yKELCXLOBojOBRh5n0HP-BP0gRQUacryEB3X2RBHc7y5h3d9B1Xe9uC0UL01SHGsVe3BlQaqeqIQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/role",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"role"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Store Role",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/role?name=Checker&description=n/a",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"role"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Checker"
+						},
+						{
+							"key": "description",
+							"value": "n/a"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User List",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYjg5YjY2NWI5ODcyNGVlMWY1ZTk1OTY1NDk4MjM0OTUwY2E3YjNiNzAzYzVlZTdlZjEwMGI5NmNjN2E3OWI2NjY5NTc1Y2I2MTU3NzJhNjgiLCJpYXQiOjE2MjIwMTg3NjIuNzYzNjg5LCJuYmYiOjE2MjIwMTg3NjIuNzYzNjk0LCJleHAiOjE2NTM1NTQ3NjIuNjE2NjQ1LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.F4OvidEUF8qxMxRt0052whNxDxm9XUGRPNRS3YKpu0fYrWZMdHKOyJgmJ9SnjfuoVIzmpwXP-HqqyV4wVdawbeyVoe6YmhQ2_AUdg_87AQUKXXrqIewAftD7Fw50iPXOkPYEKldkbPnuaAdHpLk9xQbCF403jH7-Siew-JKseRnP8jk0Yy6EM13nTNVkIjxR-iTOGozsUHFUWVu6x8x7vX-gbJXVdkRqn5JaDBIrFyOYOu0ha69SL_AENKye-N2a8GCp3I7aW74K3bmmWb_9T-jiDYkKBCnid7W6z85E47F_aGKCubsVEwkE_klOwJECgu3QKpBep14q1YMBWlB3WRUTjRNCLZE70NP02oVqokndF_8L2M1Vudnn-dmoiteEYp_lMWNPjuJzqwIZZNn_ATh0iw9Epp5yIqVB_1Ybe_8sUP0Jkq_rN4xxyYnFhtKkLEy0DIBY81nICQc1DtXmf_5IqDrDYMINICCY4fDlVWFHbrf8UaMEjtWEfrjCc-13TXG19qsAPJWVM8S6O97KTFB8gs0k3oJydPXGRgPT_ZxvycuU1rfQZiqNUqwoOM1vQUKAmKSuOER9ZYX2D_wbjVwCEtKQQU7yKELCXLOBojOBRh5n0HP-BP0gRQUacryEB3X2RBHc7y5h3d9B1Xe9uC0UL01SHGsVe3BlQaqeqIQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/uer-list",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"uer-list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Details",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/user/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Assign Role To User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYjg5YjY2NWI5ODcyNGVlMWY1ZTk1OTY1NDk4MjM0OTUwY2E3YjNiNzAzYzVlZTdlZjEwMGI5NmNjN2E3OWI2NjY5NTc1Y2I2MTU3NzJhNjgiLCJpYXQiOjE2MjIwMTg3NjIuNzYzNjg5LCJuYmYiOjE2MjIwMTg3NjIuNzYzNjk0LCJleHAiOjE2NTM1NTQ3NjIuNjE2NjQ1LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.F4OvidEUF8qxMxRt0052whNxDxm9XUGRPNRS3YKpu0fYrWZMdHKOyJgmJ9SnjfuoVIzmpwXP-HqqyV4wVdawbeyVoe6YmhQ2_AUdg_87AQUKXXrqIewAftD7Fw50iPXOkPYEKldkbPnuaAdHpLk9xQbCF403jH7-Siew-JKseRnP8jk0Yy6EM13nTNVkIjxR-iTOGozsUHFUWVu6x8x7vX-gbJXVdkRqn5JaDBIrFyOYOu0ha69SL_AENKye-N2a8GCp3I7aW74K3bmmWb_9T-jiDYkKBCnid7W6z85E47F_aGKCubsVEwkE_klOwJECgu3QKpBep14q1YMBWlB3WRUTjRNCLZE70NP02oVqokndF_8L2M1Vudnn-dmoiteEYp_lMWNPjuJzqwIZZNn_ATh0iw9Epp5yIqVB_1Ybe_8sUP0Jkq_rN4xxyYnFhtKkLEy0DIBY81nICQc1DtXmf_5IqDrDYMINICCY4fDlVWFHbrf8UaMEjtWEfrjCc-13TXG19qsAPJWVM8S6O97KTFB8gs0k3oJydPXGRgPT_ZxvycuU1rfQZiqNUqwoOM1vQUKAmKSuOER9ZYX2D_wbjVwCEtKQQU7yKELCXLOBojOBRh5n0HP-BP0gRQUacryEB3X2RBHc7y5h3d9B1Xe9uC0UL01SHGsVe3BlQaqeqIQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/assign-role?user_id=1&role_id=1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"assign-role"
+					],
+					"query": [
+						{
+							"key": "user_id",
+							"value": "1"
+						},
+						{
+							"key": "role_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Role from User",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/login?email=jhon.doe@example.com&password=123456",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "jhon.doe@example.com"
+						},
+						{
+							"key": "password",
+							"value": "123456"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
